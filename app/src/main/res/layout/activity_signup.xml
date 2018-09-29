@@ -39,7 +39,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/password"
         android:ems="10"
-        android:hint="Enter Password"
+        android:hint="Confirm Password"
         android:inputType="textPassword" />
 
     <Button
@@ -50,6 +50,7 @@
         android:layout_marginTop="50dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
         android:text="Signup" />
 
 </RelativeLayout>

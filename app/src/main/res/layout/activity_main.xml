@@ -11,39 +11,58 @@
         android:id="@+id/content_frame"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/white"
         android:gravity="center"
         android:orientation="vertical"
+        android:background="@mipmap/ic_backgroundfinal"
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_width="306dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Hello SRM"/>
+            android:layout_gravity="top"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:text="WELCOME TO FITWIZ"
+            android:textColor="@color/red"
+            android:textSize="30dp" />
+
+
+
 
         <Button
             android:id="@+id/signin"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="63dp"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="70dp"
-            android:text="SignIn"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="70dp" />
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/oval_background"
+            android:text="SignIn" />
 
         <Button
             android:id="@+id/signup"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="62dp"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="70dp"
-            android:text="SignUp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="70dp" />
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="120dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/oval_background"
+            android:text="SignUp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_gravity="center" />
 
     </FrameLayout>
 

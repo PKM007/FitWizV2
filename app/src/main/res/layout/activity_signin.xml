@@ -13,30 +13,30 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="92dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="Enter Email" />
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/signin_password"
-        android:layout_below="@id/signin_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="182dp"
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/signin_button"
-        android:layout_below="@id/signin_password"
-        android:layout_width="wrap_content"
+        android:layout_width="122dp"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="Button" />
+        android:layout_marginBottom="183dp"
+        android:background="@color/colorPrimary"
+        android:ellipsize="middle"
+        android:text="Submit" />
 </RelativeLayout>
