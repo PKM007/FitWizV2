@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "276149359333",
+    "firebase_url": "https://fitwiz-ec51d.firebaseio.com",
+    "project_id": "fitwiz-ec51d",
+    "storage_bucket": "fitwiz-ec51d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276149359333:android:0969454aa4b0ccfa",
+        "android_client_info": {
+          "package_name": "com.example.dell.fitwizv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276149359333-p98smfcepp5if30ok96l1qgtgq8dl1jh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dell.fitwizv2",
+            "certificate_hash": "45ec261b083e05026fe7db333ae964a99e9f2d9d"
+          }
+        },
+        {
+          "client_id": "276149359333-aj5oaqcvt5o0mql2v3g2p316m39dbqg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdGcv4m9aikYXDvyDr78EBNDPlPjHo9XI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276149359333-aj5oaqcvt5o0mql2v3g2p316m39dbqg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
