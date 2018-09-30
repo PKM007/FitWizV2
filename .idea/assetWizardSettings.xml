@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="66" />
+                                                <entry key="scalingPercent" value="56" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -35,7 +35,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="61" />
+                                                <entry key="scalingPercent" value="123" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -68,10 +68,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ecffd3" />
-                                      <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="C:\Users\DELL\Desktop\fitness_icon.jpg" />
-                                      <entry key="foregroundLayerName" value="ic_fitness" />
+                                      <entry key="backgroundColor" value="ffffff" />
+                                      <entry key="backgroundLayerName" value="ic_launcher_backgroun" />
+                                      <entry key="foregroundImage" value="C:\Users\DELL\Desktop\cut.jpg" />
+                                      <entry key="foregroundLayerName" value="ic_cut" />
                                       <entry key="outputName" value="ic_backgroundfinal" />
                                       <entry key="previewDensity" value="MEDIUM" />
                                       <entry key="showGrid" value="true" />
