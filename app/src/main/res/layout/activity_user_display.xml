@@ -1,35 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/my_drawer_signed"
+    tools:context=".UserDisplayActivity">
 
-    <TextView
-        android:id="@+id/hi"
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="BMI Calculator"
+            android:textSize="40dp"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:textSize="30sp"
-        android:text="Hi" />
+        android:layout_marginTop="130dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Enter Weight in kg"/>
 
-    <TextView
-        android:id="@+id/useremail"
+    <EditText
+        android:id="@+id/height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="200dp"
-        android:layout_below="@id/hi"
-        android:text="Email" />
+        android:ems="10"
+        android:layout_below="@id/weight"
+        android:hint="Enter Height in cm" />
 
-    <Button
-        android:id="@+id/signout"
+
+
+     <EditText
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="260dp"
+            android:ems="10"
+            android:layout_below="@id/height"
+            android:hint="Enter Age" />
+
+        <Button
+            android:id="@+id/calulateBMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="330dp"
+            android:ems="10"
+            android:layout_below="@id/age"
+            android:text="Calculate BMI"/>
+
+        <Button
+            android:id="@+id/selectActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_below="@id/calulateBMI"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="470dp"
+            android:ems="10"
+            android:text="Select Activity" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="400dp"
+            android:textSize="25dp"
+            android:textColor="@color/darkblue"
+            android:textAlignment="center"
+            android:ems="15"
+            android:layout_below="@id/calulateBMI" />
+
+        <Button
+            android:id="@+id/signout"
+            android:layout_width="66dp"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="end"
+            android:layout_marginBottom="158dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Signout" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/useremail"/>
+
+      </FrameLayout>
+    </ScrollView>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="158dp"
-        android:text="Signout" />
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/my_header"
+        app:menu="@menu/my_nav_menu">
 
+    </android.support.design.widget.NavigationView>
 
-</RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

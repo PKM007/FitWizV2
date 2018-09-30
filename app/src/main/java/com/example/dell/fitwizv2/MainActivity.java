@@ -20,8 +20,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
     TextView textView;
     Button signin, signup;
 
@@ -31,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        drawerLayout = findViewById(R.id.my_drawer);
-        navigationView = findViewById(R.id.nav_view);
         textView = findViewById(R.id.textView);
         signin = findViewById(R.id.signin);
         signup = findViewById(R.id.signup);
@@ -53,18 +49,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()
-
-        {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                menuItem.setChecked(true);
-                textView.setText(menuItem.getTitle());
-                drawerLayout.closeDrawers();
-                return true;
-            }
-        });
     }
 }

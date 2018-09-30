@@ -35,7 +35,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="78" />
+                                                <entry key="scalingPercent" value="61" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -70,9 +70,8 @@
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="ecffd3" />
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="C:\Users\DELL\Desktop\back.gif" />
-                                      <entry key="foregroundLayerName" value="ic_launcher_foreground" />
-                                      <entry key="generateRoundIcon" value="false" />
+                                      <entry key="foregroundImage" value="C:\Users\DELL\Desktop\fitness_icon.jpg" />
+                                      <entry key="foregroundLayerName" value="ic_fitness" />
                                       <entry key="outputName" value="ic_backgroundfinal" />
                                       <entry key="previewDensity" value="MEDIUM" />
                                       <entry key="showGrid" value="true" />
@@ -107,7 +106,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_settings_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/content/ic_reply_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -117,7 +116,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_settings" />
+                            <entry key="outputName" value="ic_signout" />
                             <entry key="sourceFile" value="C:\Users\DELL" />
                           </map>
                         </option>
