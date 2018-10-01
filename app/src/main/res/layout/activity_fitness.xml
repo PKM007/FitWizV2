@@ -13,8 +13,8 @@
         android:layout_height="wrap_content">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="match_parent"
@@ -94,6 +94,83 @@
                 android:layout_marginTop="20dp"
                 android:inputType="textMultiLine"
                 android:text="@string/crunch" />
+
+            <Button
+                android:id="@+id/crunchStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/crunchText"
+                android:text="Start Exercise"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/crunchStart"
+                android:gravity="center"
+                android:id="@+id/pushup"
+                android:text="PUSH-UPS"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/pushupImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/pushup"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1270dp"/>
+
+            <TextView
+                android:id="@+id/pushupText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pushupImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:text="@string/pushup" />
+
+            <Button
+                android:id="@+id/pushupStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/pushupText"
+                android:text="Start Exercise"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/pushupStart"
+                android:gravity="center"
+                android:id="@+id/jumpingjack"
+                android:text="JUMPING JACKS"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/jumpingjackImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/jumpingjack"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1840dp"/>
+
+
+
+
 
 
         </RelativeLayout>
