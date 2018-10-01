@@ -8,35 +8,96 @@
     android:id="@+id/my_drawer_signed"
     tools:context=".fitness">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="FITNESS ACTIVITY"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:textSize="40dp"
-            android:background="@color/grey"/>
+            android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
-            android:text="SQAUTS"
-            android:gravity="center"
-            android:textSize="30dp"
-            android:background="@color/blue"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey"
+                android:gravity="center_horizontal"
+                android:text="FITNESS ACTIVITY"
+                android:textSize="40dp" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="200dp"/>
-    </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:background="@color/blue"
+                android:gravity="center"
+                android:text="SQAUTS"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/squadImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="200dp" />
+
+            <TextView
+                android:id="@+id/squatText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/squadImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:text="@string/squat" />
+
+            <Button
+                android:id="@+id/squadStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/squatText"
+                android:text="Start Exercise"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/squadStart"
+                android:gravity="center"
+                android:id="@+id/crunch"
+                android:text="CRUNCHES"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/crunchImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/crunch"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="700dp"/>
+
+            <TextView
+                android:id="@+id/crunchText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/crunchImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:text="@string/crunch" />
+
+
+        </RelativeLayout>
+    </ScrollView>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"

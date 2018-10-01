@@ -22,6 +22,7 @@ public class SigninActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,11 +42,14 @@ public class SigninActivity extends AppCompatActivity {
                 String emailText = signinEmail.getText().toString();
                 String passwordText = signinPassword.getText().toString();
                 performSignin(emailText, passwordText);
+
             }
         });
+
     }
 
     private void performSignin(String emailText, String passwordText) {
+
         mAuth.signInWithEmailAndPassword(emailText, passwordText)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override

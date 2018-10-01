@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FitWiz</string>
+    <string name="squat">Most people skip squats because they’re hard. They use excuses like “Squats are bad for the knees”. But, put bluntly, if you’re not Squatting every week, using free weights, and breaking parallel on every rep, your training program is ineffective.</string>
+    <string name="crunch">As a core-training exercise, crunches help improve your balance by strengthening your abdominal muscles. Strong core muscles improve your posture, which helps you function efficiently in everyday life and in sporting events. A healthy posture also helps prevent lower back pain and muscle injury.</string>
 </resources>
