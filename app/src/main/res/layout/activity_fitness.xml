@@ -168,6 +168,70 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="1840dp"/>
 
+            <TextView
+                android:id="@+id/jumpingjackText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jumpingjackImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:text="@string/jumpingjack" />
+
+            <Button
+                android:id="@+id/jumpingjackStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/jumpingjackText"
+                android:text="Start Exercise"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/jumpingjackStart"
+                android:gravity="center"
+                android:id="@+id/glutebridge"
+                android:text="GLUTE BRIDGE"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/glutebridgeImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/glutebridge"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="2410dp"/>
+
+            <TextView
+                android:id="@+id/glutebridgeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/glutebridgeImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:text="@string/glutebridge" />
+
+            <Button
+                android:id="@+id/gluteBridgeStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/glutebridgeText"
+                android:text="Start Exercise"/>
+
 
 
 
