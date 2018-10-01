@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/my_drawer_signed"
+tools:context=".selectActitvity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="40dp"
+                android:text="Choose Any Activity"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:background="@color/blueheader"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/fitness_button"
+                android:layout_width="176dp"
+                android:layout_height="147dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="150dp"
+                android:background="@mipmap/ic_fitness"
+                android:gravity="center"
+                android:text="Fitness"
+                android:textColor="@color/colorAccent"
+                android:textAlignment="center"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/yoga_button"
+                android:layout_width="178dp"
+                android:layout_height="144dp"
+                android:layout_marginLeft="195dp"
+                android:layout_marginTop="150dp"
+                android:background="@mipmap/ic_yoga"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:text="YOGA"
+                android:textAlignment="center"
+                android:textSize="40dp" />
+
+
+            <Button
+                android:id="@+id/bulk_button"
+                android:layout_width="179dp"
+                android:layout_height="144dp"
+                android:layout_below="@+id/fitness_button"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="300dp"
+                android:background="@mipmap/ic_bulk"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:text="Bulk"
+                android:textAlignment="gravity"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/cut_button"
+                android:layout_width="179dp"
+                android:layout_height="144dp"
+                android:layout_marginLeft="195dp"
+                android:layout_marginTop="300dp"
+                android:gravity="center"
+                android:background="@mipmap/ic_cut"
+                android:textColor="@color/colorAccent"
+                android:text="Cut"
+                android:textAlignment="gravity"
+                android:textSize="40dp" />
+
+
+        </FrameLayout>
+    </ScrollView>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/my_header"
+        app:menu="@menu/my_nav_menu">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
