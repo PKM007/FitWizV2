@@ -103,7 +103,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="400dp"
             android:textSize="25dp"
-            android:textColor="@color/darkblue"
+            android:textColor="@color/white"
             android:textAlignment="center"
             android:ems="15"
             android:layout_below="@id/calulateBMI" />
