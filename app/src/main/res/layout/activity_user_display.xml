@@ -10,7 +10,8 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:background="@drawable/gradient">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -18,9 +19,11 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:background="@color/grey"
             android:text="BMI Calculator"
             android:textSize="40dp"
             android:layout_marginTop="40dp"
@@ -71,6 +74,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
             android:layout_marginTop="330dp"
             android:ems="10"
             android:layout_below="@id/age"
@@ -78,11 +83,13 @@
 
         <Button
             android:id="@+id/selectActivity"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_below="@id/calulateBMI"
             android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/ic_fitness"
+            android:background="@color/blueheader"
             android:layout_marginTop="470dp"
             android:ems="10"
             android:text="Select Activity" />
@@ -113,10 +120,6 @@
             android:text="Signout" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/useremail"/>
 
       </FrameLayout>
     </ScrollView>

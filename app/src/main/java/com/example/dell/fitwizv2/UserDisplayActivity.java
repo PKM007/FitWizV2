@@ -25,7 +25,6 @@ public class UserDisplayActivity extends AppCompatActivity {
     Button calculateBMI,sActivity;
     TextView result;
     FirebaseAuth mAuth;
-    TextView useremail;
     Button signOut;
     boolean doubleBackToExitPressedOnce = false;
     DrawerLayout drawerLayout;
@@ -61,7 +60,6 @@ public class UserDisplayActivity extends AppCompatActivity {
 
         FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
-        useremail = findViewById(R.id.useremail);
         signOut = findViewById(R.id.signout);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()
@@ -75,8 +73,6 @@ public class UserDisplayActivity extends AppCompatActivity {
             }
         });
 
-        if(firebaseUser != null)
-            useremail.setText(firebaseUser.getEmail());
 
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
