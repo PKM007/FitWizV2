@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dell.fitwizv2">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -24,7 +25,7 @@
         <activity android:name=".fitness" />
         <activity android:name=".yoga" />
         <activity android:name=".bulk" />
-        <activity android:name=".cut"></activity>
+        <activity android:name=".health"></activity>
     </application>
 
 </manifest>

@@ -14,7 +14,7 @@ public class selectActitvity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    Button fitness,yoga,bulk,cut;
+    Button fitness,yoga,bulk,health;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class selectActitvity extends AppCompatActivity {
         fitness=findViewById(R.id.fitness_button);
         yoga=findViewById(R.id.yoga_button);
         bulk=findViewById(R.id.bulk_button);
-        cut=findViewById(R.id.cut_button);
+        health=findViewById(R.id.health_button);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()
 
@@ -63,10 +63,10 @@ public class selectActitvity extends AppCompatActivity {
             }
         });
 
-        cut.setOnClickListener(new View.OnClickListener() {
+        health.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(selectActitvity.this,cut.class);
+                Intent intent = new Intent(selectActitvity.this,health.class);
                 startActivity(intent);
             }
         });

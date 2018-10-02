@@ -71,7 +71,7 @@ tools:context=".selectActitvity">
                 android:textSize="40dp" />
 
             <Button
-                android:id="@+id/cut_button"
+                android:id="@+id/health_button"
                 android:layout_width="179dp"
                 android:layout_height="144dp"
                 android:layout_marginLeft="195dp"
