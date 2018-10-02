@@ -1,9 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/my_drawer_signed"
     tools:context=".yoga">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey"
+                android:gravity="center_horizontal"
+                android:text="YOGA ACTIVITY"
+                android:textSize="40dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:background="@color/blue"
+                android:gravity="center"
+                android:text="Surya Namaskar (Sun Salutations)"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/snImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="220dp" />
+
+            <TextView
+                android:id="@+id/snText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/snImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:text="@string/squat" />
+
+            <Button
+                android:id="@+id/snStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/snText"
+                android:text="Start Exercise"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/snStart"
+                android:gravity="center"
+                android:id="@+id/ut"
+                android:text="Utkatasana (Chair Pose)"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/utImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/ut"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="730dp"/>
+
+            <TextView
+                android:id="@+id/utText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/utImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:inputType="textMultiLine"
+                android:text="@string/crunch" />
+
+            <Button
+                android:id="@+id/utStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/utText"
+                android:text="Start Exercise"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/utStart"
+                android:gravity="center"
+                android:id="@+id/pu"
+                android:text="Parivrtta Utkatasana"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/puImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/pu"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1270dp"/>
+
+            <TextView
+                android:id="@+id/puText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/puImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:inputType="textMultiLine"
+                android:text="@string/pushup" />
+
+            <Button
+                android:id="@+id/puStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/puText"
+                android:text="Start Exercise"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/puStart"
+                android:gravity="center"
+                android:id="@+id/dfd"
+                android:text="Downward Facing Dog"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/dfdImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/dfd"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1840dp"/>
+
+            <TextView
+                android:id="@+id/dfdText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dfdImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:inputType="textMultiLine"
+                android:text="@string/jumpingjack" />
+
+            <Button
+                android:id="@+id/dfdStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/dfdText"
+                android:text="Start Exercise"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/dfdStart"
+                android:gravity="center"
+                android:id="@+id/ll"
+                android:text="Low Lunge"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/llImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/ll"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="2410dp"/>
+
+            <TextView
+                android:id="@+id/llText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:text="@string/glutebridge" />
+
+
+            <Button
+                android:id="@+id/llStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/llText"
+                android:text="Start Exercise"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/llStart"
+                android:gravity="center"
+                android:id="@+id/triangle"
+                android:text="Triangle Pose"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/tringleImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/triangle"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="2970dp"/>
+
+            <TextView
+                android:id="@+id/triangleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tringleImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:text="@string/glutebridge" />
+
+            <Button
+                android:id="@+id/triangleStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/triangleText"
+                android:text="Start Exercise"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/my_header"
+        app:menu="@menu/my_nav_menu">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
