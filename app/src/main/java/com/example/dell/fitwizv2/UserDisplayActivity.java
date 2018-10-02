@@ -1,6 +1,7 @@
 package com.example.dell.fitwizv2;
 
 import android.app.Activity;
+import java.math.*;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,7 +25,8 @@ public class UserDisplayActivity extends AppCompatActivity {
 
     EditText weight,height,age;
     Button calculateBMI,sActivity;
-    TextView result;
+    RadioButton male,female;
+    TextView resultBMI,resultBMR;
     FirebaseAuth mAuth;
     Button signOut;
     boolean doubleBackToExitPressedOnce = false;
@@ -40,16 +43,50 @@ public class UserDisplayActivity extends AppCompatActivity {
         weight=findViewById(R.id.weight);
         height=findViewById(R.id.height);
         age=findViewById(R.id.age);
-        result=findViewById(R.id.result);
+        resultBMI=findViewById(R.id.resultBMI);
+        resultBMR=findViewById(R.id.resultBMR);
         calculateBMI=findViewById(R.id.calulateBMI);
         sActivity=findViewById(R.id.selectActivity);
+        male=findViewById(R.id.male);
+        female=findViewById(R.id.female);
 
-        calculateBMI.setOnClickListener(new View.OnClickListener() {
+
+        male.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calulate();
+                male.setSelected(true);
+                female.setSelected(false);
             }
         });
+
+        female.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                female.setSelected(true);
+                male.setSelected(false);
+            }
+        });
+
+
+
+            calculateBMI.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(male.isSelected()==true)
+                    {
+                        mcalulate();
+                    }
+                    else if(female.isSelected()==true)
+                    {
+                        fcalculate();
+                    }
+                    else{
+                        Toast.makeText(UserDisplayActivity.this,"Please Select Any Gender",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+
+
 
         sActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +120,7 @@ public class UserDisplayActivity extends AppCompatActivity {
         });
     }
 
-    public void calulate()
+    public void mcalulate()
     {
         String weightstr=weight.getText().toString();
         String heightstr=height.getText().toString();
@@ -92,23 +129,62 @@ public class UserDisplayActivity extends AppCompatActivity {
         {
             float heightValue=Float.parseFloat(heightstr);
             float weightValue=Float.parseFloat(weightstr);
+            int ageValue=Integer.parseInt(agestr);
             float bmi=10000*weightValue/(heightValue*heightValue);
             if(bmi<18.5)
             {
-                result.setText("You Are Underweight \n Your BMI is- "+bmi);
+                resultBMI.setText("You Are Underweight \n Your BMI is- "+bmi);
             }
             else if(bmi>=18.5 && bmi<24.9)
             {
-                result.setText(" You Are Normal \nYour BMI is- "+bmi);
+                resultBMI.setText(" You Are Normal \nYour BMI is- "+bmi);
             }
             else if(bmi>24.9 && bmi<29.9)
             {
-                result.setText("You Are Overweight \nYour BMI is- "+bmi);
+                resultBMI.setText("You Are Overweight \nYour BMI is- "+bmi);
             }
             else
             {
-                result.setText("You are Obese\nYour BMI is- "+bmi);
+                resultBMI.setText("You are Obese\nYour BMI is- "+bmi);
             }
+            double bmr=66+(13.7*weightValue)+(5*heightValue)-(6.8*ageValue);
+            int fbmr=(int)bmr;
+            resultBMR.setText("Your Calorie Intake is-"+fbmr);
+
+        }
+    }
+
+    public void fcalculate()
+    {
+        String weightstr=weight.getText().toString();
+        String heightstr=height.getText().toString();
+        String agestr=height.getText().toString();
+        if(heightstr !=null && !"".equals(heightstr) && weightstr !=null && !"".equals(weightstr))
+        {
+            float heightValue=Float.parseFloat(heightstr);
+            float weightValue=Float.parseFloat(weightstr);
+            float ageValue=Float.parseFloat(agestr);
+            float bmi=10000*weightValue/(heightValue*heightValue);
+            if(bmi<18.5)
+            {
+                resultBMI.setText("You Are Underweight \n Your BMI is- "+bmi);
+            }
+            else if(bmi>=18.5 && bmi<24.9)
+            {
+                resultBMI.setText(" You Are Normal \nYour BMI is- "+bmi);
+            }
+            else if(bmi>24.9 && bmi<29.9)
+            {
+                resultBMI.setText("You Are Overweight \nYour BMI is- "+bmi);
+            }
+            else
+            {
+                resultBMI.setText("You are Obese\nYour BMI is- "+bmi);
+            }
+            double bmr=655+(9.6*weightValue)+(1.8*heightValue)-(4.7*ageValue);
+            int fbmr=(int)bmr;
+            resultBMR.setText("Your Calorie Intake is- "+fbmr);
+
         }
     }
 

@@ -8,20 +8,26 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView textView;
-    Button signin, signup;
+    TextView register;
+    EditText email,password;
+    Button signin;
+    FirebaseAuth mAuth;
+    CardView login;
 
 
     @Override
@@ -29,11 +35,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = findViewById(R.id.textView);
-        signin = findViewById(R.id.signin);
-        signup = findViewById(R.id.signup);
+        mAuth = FirebaseAuth.getInstance();
 
-        signup.setOnClickListener(new View.OnClickListener() {
+        register=findViewById(R.id.register);
+        email=findViewById(R.id.email);
+        password=findViewById(R.id.password);
+        login=findViewById(R.id.login);
+
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SignupActivity.class);
@@ -41,13 +50,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        signin.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SigninActivity.class);
-                startActivity(intent);
+                String emailText = email.getText().toString();
+                String passwordText = password.getText().toString();
+                performSignin(emailText, passwordText);
             }
         });
 
+    }
+    private void performSignin(String emailText, String passwordText) {
+
+        mAuth.signInWithEmailAndPassword(emailText, passwordText)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            Intent intent = new Intent(MainActivity.this, UserDisplayActivity.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(MainActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 }

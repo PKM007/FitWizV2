@@ -9,29 +9,6 @@
     tools:context=".MainActivity">
 
 
-
-        <Button
-            android:id="@+id/signin"
-            android:layout_width="wrap_content"
-            android:layout_height="63dp"
-            android:layout_alignTop="@+id/signup"
-            android:layout_gravity="center"
-            android:layout_toStartOf="@+id/email1"
-            android:background="@drawable/oval_background"
-            android:text="SignIn" />
-
-        <Button
-            android:id="@+id/signup"
-            android:layout_width="wrap_content"
-            android:layout_height="62dp"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_marginBottom="17dp"
-            android:layout_toEndOf="@+id/email1"
-            android:background="@drawable/oval_background"
-            android:text="SignUp" />
-
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="250dp"
@@ -42,7 +19,7 @@
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/email1"
+        android:id="@+id/email"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
@@ -55,7 +32,7 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/password1"
+        android:id="@+id/password"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
@@ -73,6 +50,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="140dp"
+            android:id="@+id/login"
             app:cardBackgroundColor="@color/colorAccent"
             app:cardCornerRadius="25dp"
 
@@ -83,7 +61,6 @@
                     android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/login"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"

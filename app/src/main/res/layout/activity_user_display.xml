@@ -24,22 +24,22 @@
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
             android:background="@color/grey"
-            android:text="BMI Calculator"
-            android:textSize="40dp"
+            android:text="BMI AND BMR Calculator"
+            android:textSize="30dp"
             android:layout_marginTop="40dp"
             android:textStyle="bold"/>
 
-    <EditText
-        android:id="@+id/weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="130dp"
-        android:layout_gravity="center_horizontal"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Enter Weight in kg"/>
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:ems="10"
+            android:hint="Enter Weight in kg"
+            android:inputType="text" />
 
     <EditText
         android:id="@+id/height"
@@ -48,7 +48,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="180dp"
         android:ems="10"
         android:layout_below="@id/weight"
         android:hint="Enter Height in cm" />
@@ -62,24 +62,70 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="260dp"
+            android:layout_marginTop="230dp"
             android:ems="10"
             android:layout_below="@id/height"
             android:hint="Enter Age" />
 
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:gravity="center"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="100dp"/>
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="190dp"
+            android:text="Female" />
+
         <Button
             android:id="@+id/calulateBMI"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_below="@id/age"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="360dp"
+            android:background="@color/colorAccent"
+            android:ems="10"
+            android:text="Calculate BMI AND BMR"
+            android:textColor="@color/white" />
+
+
+        <TextView
+            android:id="@+id/resultBMI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_below="@id/calulateBMI"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:background="@color/colorAccent"
+            android:layout_marginTop="420dp"
+            android:ems="15"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:layout_marginTop="330dp"
-            android:ems="10"
-            android:layout_below="@id/age"
-            android:text="Calculate BMI"/>
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/resultBMR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_below="@id/resultBMI"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="470dp"
+            android:ems="15"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
 
         <Button
             android:id="@+id/selectActivity"
@@ -90,23 +136,9 @@
             android:layout_gravity="center_horizontal"
             android:drawableLeft="@drawable/ic_fitness"
             android:background="@color/blueheader"
-            android:layout_marginTop="470dp"
+            android:layout_marginTop="510dp"
             android:ems="10"
             android:text="Select Activity" />
-
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="400dp"
-            android:textSize="25dp"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:ems="15"
-            android:layout_below="@id/calulateBMI" />
 
         <Button
             android:id="@+id/signout"
@@ -121,7 +153,7 @@
 
 
 
-      </FrameLayout>
+    </FrameLayout>
     </ScrollView>
 
     <android.support.design.widget.NavigationView
