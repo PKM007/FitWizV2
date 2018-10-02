@@ -10,7 +10,8 @@ tools:context=".selectActitvity">
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:background="@drawable/gradient">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -24,7 +25,7 @@ tools:context=".selectActitvity">
                 android:text="Choose Any Activity"
                 android:layout_marginTop="15dp"
                 android:gravity="center_horizontal"
-                android:background="@color/blueheader"
+                android:background="@color/grey"
                 android:layout_centerHorizontal="true"
                 android:textAlignment="center"/>
 
@@ -65,7 +66,7 @@ tools:context=".selectActitvity">
                 android:background="@mipmap/ic_bulk"
                 android:gravity="center"
                 android:textColor="@color/colorAccent"
-                android:text="Bulk"
+                android:text="BULK N CUT"
                 android:textAlignment="gravity"
                 android:textSize="40dp" />
 
@@ -78,7 +79,7 @@ tools:context=".selectActitvity">
                 android:gravity="center"
                 android:background="@mipmap/ic_cut"
                 android:textColor="@color/colorAccent"
-                android:text="Cut"
+                android:text="HEALTH N FOOD"
                 android:textAlignment="gravity"
                 android:textSize="40dp" />
 
