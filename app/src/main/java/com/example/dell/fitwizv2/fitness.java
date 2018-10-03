@@ -1,5 +1,6 @@
 package com.example.dell.fitwizv2;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -7,14 +8,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.Toast;
+
 import java.lang.Object;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.squareup.picasso.Picasso;
 
 public class fitness extends AppCompatActivity {
 
     ImageView squadImage,crunchImage,pushupImage,jumpingjackImage,glutebridgeImage;
     DrawerLayout drawerLayout;
+    FirebaseAuth mAuth;
     NavigationView navigationView;
 
     @Override
@@ -40,9 +45,47 @@ public class fitness extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 menuItem.setChecked(true);
+                switch (menuItem.getItemId()) {
+                    case R.id.profile:
+                        Intent intent = new Intent(fitness.this, Account.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.bmibmr:
+                        Intent intent1 = new Intent(fitness.this, UserDisplayActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.fitness:
+                        Toast.makeText(fitness.this,"You are currently in seleted activity",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.yoga:
+                        Intent intent2 = new Intent(fitness.this, yoga.class);
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.bulkncut:
+                        Intent intent3 = new Intent(fitness.this, bulk.class);
+                        startActivity(intent3);
+                        break;
+
+                    case R.id.health:
+                        Intent intent4 = new Intent(fitness.this, health.class);
+                        startActivity(intent4);
+                        break;
+
+                    case R.id.signout:
+                        mAuth.signOut();
+                        goToHome();
+
+                }
                 drawerLayout.closeDrawers();
                 return true;
             }
         });
+    }
+    void goToHome() {
+        Intent intent = new Intent(fitness.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

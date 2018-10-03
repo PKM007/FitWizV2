@@ -1,5 +1,6 @@
 package com.example.dell.fitwizv2;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -7,14 +8,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
 public class yoga extends AppCompatActivity {
 
-    ImageView snImage,utImage,puImage,dfdImage,llImage,triangleImage;
+    ImageView snImage, utImage, puImage, dfdImage, llImage, triangleImage;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +28,12 @@ public class yoga extends AppCompatActivity {
         drawerLayout = findViewById(R.id.my_drawer_signed);
         navigationView = findViewById(R.id.nav_view);
         snImage = findViewById(R.id.snImage);
-        utImage=findViewById(R.id.utImage);
-        puImage=findViewById(R.id.puImage);
-        dfdImage=findViewById(R.id.dfdImage);
-        llImage=findViewById(R.id.llImage);
-        triangleImage=findViewById(R.id.tringleImage);
+        utImage = findViewById(R.id.utImage);
+        puImage = findViewById(R.id.puImage);
+        dfdImage = findViewById(R.id.dfdImage);
+        llImage = findViewById(R.id.llImage);
+        triangleImage = findViewById(R.id.tringleImage);
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
         Picasso.with(getApplicationContext()).load("https://satiyoga.eu/images/suryanamaskar.png").into(snImage);
         Picasso.with(getApplicationContext()).load("https://cdn2.stylecraze.com/wp-content/uploads/2013/08/Utkatasana-1.jpg").into(utImage);
@@ -41,9 +47,50 @@ public class yoga extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 menuItem.setChecked(true);
+                switch (menuItem.getItemId()) {
+                    case R.id.profile:
+                        Intent intent = new Intent(yoga.this, Account.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.bmibmr:
+                        Intent intent2 = new Intent(yoga.this, yoga.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.fitness:
+                        Intent intent1 = new Intent(yoga.this, fitness.class);
+                        startActivity(intent1);
+                        break;
+
+                    case R.id.yoga:
+                        Toast.makeText(yoga.this, "You are currently on selected Page", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.bulkncut:
+                        Intent intent3 = new Intent(yoga.this, bulk.class);
+                        startActivity(intent3);
+                        break;
+
+                    case R.id.health:
+                        Intent intent4 = new Intent(yoga.this, fitness.class);
+                        startActivity(intent4);
+                        break;
+
+                    case R.id.signout:
+                        mAuth.signOut();
+                        goToHome();
+
+
+                }
                 drawerLayout.closeDrawers();
                 return true;
             }
         });
     }
+    void goToHome() {
+        Intent intent = new Intent(yoga.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
+

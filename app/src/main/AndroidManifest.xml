@@ -25,7 +25,8 @@
         <activity android:name=".fitness" />
         <activity android:name=".yoga" />
         <activity android:name=".bulk" />
-        <activity android:name=".health"></activity>
+        <activity android:name=".health" />
+        <activity android:name=".Account"></activity>
     </application>
 
 </manifest>

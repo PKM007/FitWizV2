@@ -172,7 +172,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/places/ic_fitness_center_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_chevron_right_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -182,7 +182,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_fitness" />
+                            <entry key="outputName" value="ic_activity" />
                             <entry key="sourceFile" value="C:\Users\DELL" />
                           </map>
                         </option>

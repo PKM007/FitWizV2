@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -28,7 +29,6 @@ public class UserDisplayActivity extends AppCompatActivity {
     RadioButton male,female;
     TextView resultBMI,resultBMR;
     FirebaseAuth mAuth;
-    Button signOut;
     boolean doubleBackToExitPressedOnce = false;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -97,7 +97,9 @@ public class UserDisplayActivity extends AppCompatActivity {
 
         FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
-        signOut = findViewById(R.id.signout);
+
+
+
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()
 
@@ -105,20 +107,52 @@ public class UserDisplayActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 menuItem.setChecked(true);
+                switch (menuItem.getItemId()) {
+                    case R.id.profile:
+                        Intent intent = new Intent(UserDisplayActivity.this, Account.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.bmibmr:
+                        Toast.makeText(UserDisplayActivity.this, "You are currently on selected Page", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.fitness:
+                        Intent intent1 = new Intent(UserDisplayActivity.this, fitness.class);
+                        startActivity(intent1);
+                        break;
+
+                    case R.id.yoga:
+                        Intent intent2 = new Intent(UserDisplayActivity.this, yoga.class);
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.bulkncut:
+                        Intent intent3 = new Intent(UserDisplayActivity.this, bulk.class);
+                        startActivity(intent3);
+                        break;
+
+                    case R.id.health:
+                        Intent intent4 = new Intent(UserDisplayActivity.this, fitness.class);
+                        startActivity(intent4);
+                        break;
+
+                    case R.id.signout:
+                        mAuth.signOut();
+                        goToHome();
+
+
+                }
+
                 drawerLayout.closeDrawers();
                 return true;
             }
         });
 
 
-        signOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth.signOut();
-                goToHome();
-            }
-        });
-    }
+        }
+
+
+
+
 
     public void mcalulate()
     {
