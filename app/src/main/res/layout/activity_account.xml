@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".Account">
 
-    <ScrollView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/gradient">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnChoose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Choose" />
 
-            <TextView
-                android:id="@+id/msgtext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:text="Message Text"
-                android:gravity="center"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="280dp"
-                android:layout_marginLeft="140dp"
-                android:textSize="20dp"/>
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Upload" />
+    </LinearLayout>
 
-        </RelativeLayout>
-    </ScrollView>
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layout_button"
+        android:layout_height="match_parent" />
 
-</android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

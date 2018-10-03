@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="120dp"
-    android:background="@android:color/holo_green_light"
+    android:background="#374258"
     android:padding="16dp"
     android:orientation="vertical">
 
@@ -10,12 +10,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background"/>
+        android:src="@mipmap/ic_logosmall"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="FitWizV2"
+        android:layout_marginTop="20dp"
+        android:text="FitWiz"
+        android:textSize="30dp"
         android:layout_toRightOf="@id/img"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 

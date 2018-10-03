@@ -135,10 +135,21 @@ public class UserDisplayActivity extends AppCompatActivity {
                         startActivity(intent4);
                         break;
 
+
                     case R.id.signout:
                         mAuth.signOut();
                         goToHome();
 
+
+                    case R.id.share:
+                        Intent myIntent=new Intent(Intent.ACTION_SEND);
+                        myIntent.setType("text/plain");
+                        String shareBody="Hey Checkout This New App FitWiz Available At Play Store";
+                        String shareSub="Your Subject here";
+                        myIntent.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                        myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                        startActivity(Intent.createChooser(myIntent,"Share using"));
+                        break;
 
                 }
 
