@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     Button signin;
     FirebaseAuth mAuth;
     CardView login;
+    FirebaseAuth.AuthStateListener mAuthListener;
 
 
     @Override
@@ -41,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
         login=findViewById(R.id.login);
+        mAuthListener=new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(firebaseAuth.getCurrentUser()!=null){
+                    startActivity(new Intent(MainActivity.this,UserDisplayActivity.class));
+                }
+            }
+        };
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +68,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+    @Override
+    protected void onStart(){
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+
+    }
+
+    public void checkCurrentUser() {
+        // [START check_current_user]
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // User is signed in
+        } else {
+            // No user is signed in
+        }
+        // [END check_current_user]
     }
     private void performSignin(String emailText, String passwordText) {
 
