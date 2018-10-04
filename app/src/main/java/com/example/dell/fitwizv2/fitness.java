@@ -1,6 +1,7 @@
 package com.example.dell.fitwizv2;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -87,6 +88,17 @@ public class fitness extends AppCompatActivity {
                         myIntent.putExtra(Intent.EXTRA_SUBJECT,shareBody);
                         myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
                         startActivity(Intent.createChooser(myIntent,"Share using"));
+                        break;
+
+                    case R.id.contact:
+                        Intent intent6=new Intent(Intent.ACTION_SEND);
+                        intent6.setData(Uri.parse("mailto:"));
+                        String[] to={"prakharmishra_anil@srmuniv.edu.in","prakhar.prakhar.mishra1@gmail.com"};
+                        intent6.putExtra(Intent.EXTRA_EMAIL,to);
+                        intent6.putExtra(Intent.EXTRA_SUBJECT,"Hi this is regarding FitWiz!");
+                        intent6.putExtra(Intent.EXTRA_TEXT,"");
+                        intent6.setType("message/rfc822");
+                        startActivity(Intent.createChooser(intent6,"Send Email"));
                         break;
 
                 }

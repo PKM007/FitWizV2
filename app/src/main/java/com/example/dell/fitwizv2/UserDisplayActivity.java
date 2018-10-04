@@ -3,6 +3,7 @@ package com.example.dell.fitwizv2;
 import android.app.Activity;
 import java.math.*;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -146,6 +147,17 @@ public class UserDisplayActivity extends AppCompatActivity {
                         myIntent.putExtra(Intent.EXTRA_SUBJECT,shareBody);
                         myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
                         startActivity(Intent.createChooser(myIntent,"Share using"));
+                        break;
+
+                    case R.id.contact:
+                        Intent intent6=new Intent(Intent.ACTION_SEND);
+                        intent6.setData(Uri.parse("mailto:"));
+                        String[] to={"prakharmishra_anil@srmuniv.edu.in","prakhar.prakhar.mishra1@gmail.com"};
+                        intent6.putExtra(Intent.EXTRA_EMAIL,to);
+                        intent6.putExtra(Intent.EXTRA_SUBJECT,"Hi this is regarding FitWiz!");
+                        intent6.putExtra(Intent.EXTRA_TEXT,"");
+                        intent6.setType("message/rfc822");
+                        startActivity(Intent.createChooser(intent6,"Send Email"));
                         break;
 
                 }
