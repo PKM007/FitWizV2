@@ -55,16 +55,19 @@
                 android:inputType="textMultiLine"
                 android:text="@string/squat" />
 
-            <Button
+            <TextView
                 android:id="@+id/squadStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
                 android:ems="10"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/squatText"
-                android:text="Start Exercise"/>
+                android:text="4 sets(15 reps each)"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -98,16 +101,19 @@
                 android:inputType="textMultiLine"
                 android:text="@string/crunch" />
 
-            <Button
+            <TextView
                 android:id="@+id/crunchStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
                 android:ems="10"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/crunchText"
-                android:text="Start Exercise"/>
+                android:text="3 sets(15 reps each)"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -141,16 +147,19 @@
                 android:inputType="textMultiLine"
                 android:text="@string/pushup" />
 
-            <Button
+            <TextView
                 android:id="@+id/pushupStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
                 android:ems="10"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/pushupText"
-                android:text="Start Exercise"/>
+                android:text="4 set(20 reps each)"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -184,16 +193,19 @@
                 android:inputType="textMultiLine"
                 android:text="@string/jumpingjack" />
 
-            <Button
+            <TextView
                 android:id="@+id/jumpingjackStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
                 android:ems="10"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/jumpingjackText"
-                android:text="Start Exercise"/>
+                android:text="3 set(50 reps each)"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -227,16 +239,111 @@
                 android:inputType="textMultiLine"
                 android:text="@string/glutebridge" />
 
-            <Button
+            <TextView
                 android:id="@+id/gluteBridgeStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
                 android:ems="10"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/glutebridgeText"
-                android:text="Start Exercise"/>
+                android:text="4 sets(15 reps each)"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/gluteBridgeStart"
+                android:gravity="center"
+                android:id="@+id/lunges"
+                android:text="LUNGES"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/lungesImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/lunges"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="2960dp"/>
+
+            <TextView
+                android:id="@+id/lungesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lungesImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:text="@string/lunges" />
+
+            <TextView
+                android:id="@+id/lungesStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/lungesText"
+                android:text="4 sets(15 reps each)"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue"
+                android:layout_below="@+id/lungesStart"
+                android:gravity="center"
+                android:id="@+id/plank"
+                android:text="PLANK"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/plankImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/plank"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3550dp"/>
+
+            <TextView
+                android:id="@+id/plankText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plankImage"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:text="@string/plank" />
+
+            <TextView
+                android:id="@+id/plankStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/plankText"
+                android:text="4 sets(1 min each)"/>
 
 
         </RelativeLayout>
