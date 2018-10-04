@@ -108,10 +108,6 @@ public class UserDisplayActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 menuItem.setChecked(true);
                 switch (menuItem.getItemId()) {
-                    case R.id.profile:
-                        Intent intent = new Intent(UserDisplayActivity.this, Account.class);
-                        startActivity(intent);
-                        break;
                     case R.id.bmibmr:
                         Toast.makeText(UserDisplayActivity.this, "You are currently on selected Page", Toast.LENGTH_SHORT).show();
                         break;

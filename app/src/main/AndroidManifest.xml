@@ -19,7 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SigninActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".UserDisplayActivity" />
         <activity android:name=".selectActitvity" />
@@ -27,7 +26,6 @@
         <activity android:name=".yoga" />
         <activity android:name=".bulk" />
         <activity android:name=".health" />
-        <activity android:name=".Account" />
         <activity android:name=".MainActivity"></activity>
     </application>
 

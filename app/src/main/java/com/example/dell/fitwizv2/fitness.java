@@ -46,10 +46,7 @@ public class fitness extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 menuItem.setChecked(true);
                 switch (menuItem.getItemId()) {
-                    case R.id.profile:
-                        Intent intent = new Intent(fitness.this, Account.class);
-                        startActivity(intent);
-                        break;
+
                     case R.id.bmibmr:
                         Intent intent1 = new Intent(fitness.this, UserDisplayActivity.class);
                         startActivity(intent1);
@@ -76,6 +73,16 @@ public class fitness extends AppCompatActivity {
                     case R.id.signout:
                         mAuth.signOut();
                         goToHome();
+
+                    case R.id.share:
+                        Intent myIntent=new Intent(Intent.ACTION_SEND);
+                        myIntent.setType("text/plain");
+                        String shareBody="Hey Checkout This New App FitWiz Available At Play Store";
+                        String shareSub="Your Subject here";
+                        myIntent.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                        myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                        startActivity(Intent.createChooser(myIntent,"Share using"));
+                        break;
 
                 }
                 drawerLayout.closeDrawers();

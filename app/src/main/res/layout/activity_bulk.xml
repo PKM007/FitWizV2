@@ -105,6 +105,7 @@
                 android:layout_below="@+id/leg"
                 android:layout_centerHorizontal="true"
                 android:ems="10"
+                android:textAlignment="center"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/white"
                 android:inputType="textMultiLine"
@@ -152,10 +153,11 @@
                 android:layout_below="@+id/backnbicep"
                 android:layout_centerHorizontal="true"
                 android:ems="10"
+                android:textAlignment="center"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/white"
                 android:inputType="textMultiLine"
-                android:text="@string/pu" />
+                android:text="@string/day3" />
 
             <Button
                 android:id="@+id/day3Start"
@@ -176,7 +178,7 @@
                 android:layout_below="@+id/day3Start"
                 android:gravity="center"
                 android:id="@+id/day4"
-                android:text="Cardio Abs Workout"
+                android:text="DAY 4"
                 android:textSize="22dp" />
 
             <TextView
@@ -200,10 +202,11 @@
                 android:layout_below="@+id/cardioabs"
                 android:layout_centerHorizontal="true"
                 android:ems="10"
+                android:textAlignment="center"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/white"
                 android:inputType="textMultiLine"
-                android:text="@string/dfd" />
+                android:text="@string/day4" />
 
             <Button
                 android:id="@+id/day4Start"
@@ -245,11 +248,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rest1"
                 android:layout_centerHorizontal="true"
+                android:textAlignment="center"
                 android:ems="10"
                 android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:inputType="textMultiLine"
-                android:text="@string/ll" />
+                android:text="@string/rest" />
 
 
 
@@ -284,11 +288,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/shoulder"
                 android:layout_centerHorizontal="true"
+                android:textAlignment="center"
                 android:ems="10"
                 android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:inputType="textMultiLine"
-                android:text="@string/triangle" />
+                android:text="@string/day6" />
 
             <Button
                 android:id="@+id/day6Start"
@@ -331,10 +336,11 @@
                 android:layout_below="@+id/rest2"
                 android:layout_centerHorizontal="true"
                 android:ems="10"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:inputType="textMultiLine"
-                android:text="@string/ll" />
+                android:text="@string/rest" />
 
 
         </RelativeLayout>

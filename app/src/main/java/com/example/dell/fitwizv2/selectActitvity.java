@@ -9,12 +9,16 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class selectActitvity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Button fitness,yoga,bulk,health;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,5 +75,62 @@ public class selectActitvity extends AppCompatActivity {
             }
         });
 
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()
+
+        {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                menuItem.setChecked(true);
+                switch (menuItem.getItemId()) {
+
+                    case R.id.bmibmr:
+                        Intent intent2 = new Intent(selectActitvity.this, UserDisplayActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.fitness:
+                        Intent intent1 = new Intent(selectActitvity.this, fitness.class);
+                        startActivity(intent1);
+                        break;
+
+                    case R.id.yoga:
+                        Intent intent5 = new Intent(selectActitvity.this,yoga.class);
+                        startActivity(intent5);
+                        break;
+
+                    case R.id.bulkncut:
+                        Intent intent3 = new Intent(selectActitvity.this, bulk.class);
+                        startActivity(intent3);
+                        break;
+
+                    case R.id.health:
+                        Intent intent4 = new Intent(selectActitvity.this, health.class);
+                        startActivity(intent4);
+                        break;
+
+                    case R.id.signout:
+                        mAuth.signOut();
+                        goToHome();
+
+                    case R.id.share:
+                        Intent myIntent=new Intent(Intent.ACTION_SEND);
+                        myIntent.setType("text/plain");
+                        String shareBody="Hey Checkout This New App FitWiz Available At Play Store";
+                        String shareSub="Your Subject here";
+                        myIntent.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                        myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                        startActivity(Intent.createChooser(myIntent,"Share using"));
+                        break;
+
+
+                }
+                drawerLayout.closeDrawers();
+                return true;
+            }
+        });
+    }
+    void goToHome() {
+        Intent intent = new Intent(selectActitvity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

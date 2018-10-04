@@ -127,7 +127,7 @@
                 android:layout_below="@+id/pu"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="1270dp"/>
+                android:layout_marginTop="1290dp"/>
 
             <TextView
                 android:id="@+id/puText"
@@ -213,7 +213,7 @@
                 android:layout_below="@+id/ll"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="2410dp"/>
+                android:layout_marginTop="2370dp"/>
 
             <TextView
                 android:id="@+id/llText"
@@ -257,7 +257,7 @@
                 android:layout_below="@+id/triangle"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="2970dp"/>
+                android:layout_marginTop="2940dp"/>
 
             <TextView
                 android:id="@+id/triangleText"

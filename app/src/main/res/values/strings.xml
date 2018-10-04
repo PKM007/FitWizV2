@@ -32,6 +32,63 @@
 8.Dumbbell Squats (3 set)(x10)
     </string>
 
+    <string name="day3">1.Deadlift / DB Deadlift (4 set)(x15 x12 x10 x8)\n
+2.Bent Over Row / DB (4 set)(x15 x12 x10 x8)\n
+3.Zottman Curls (4 set)(x15 x12 x10 x8)\n
+4.Reverse Fly (3 set)(x12 x10 x8))\n
+5.One Arm Row + Twist (3 set)(x12 x10 x8)\n
+6.Still Leg DL (3 set)(x12 x10 x8)\n
+7.Hammer Curl 303 Tempo (3 set)(×8)\n
+8.Towel Skydivers 303 Tempo (3 set)(×8)\n
+9.Dumbbell Snatch x 60 sec\n
+10.Burnout Alt Curl x 60 sec
+    </string>
+
+    <string name="day4">
+        Complete 2 rounds of each exercise for 50 seconds:\n
+1.Scissor Jumps / Switch Jumps\n
+2.Bear Plank Walkout w/ Pushup / No pushup\n
+3.Skaters / Lateral Juke\n
+4.Bear Plank Box Walks / High Plank\n
+5.Broad Jump + Hop Back / Hop Forward And Back\n
+6.High Plank Elbow to Knee / from Knees (kickback)\n
+7.180 Squat Jumps / 180 Squats\n
+8.Bear Plank Updowns / from Knees\n
+9.Runner’s Skip / Runner’s Stepback\n
+10.Crab Reach / Rest in Between\n
+\n
+Abs Workout\n
+1.3 Level Situps / Crunches\n
+2.Superman Plank / from Knees\n
+3.Elevated Knee Tuck / Lying Knee Tuck\n
+4.-up Situps / Crunches\n
+5.Half Boat Twist / Modified w/ Feet Down\n
+6.Forearm Plank Twist / from Knees\n
+\n
+Cool Down\n
+1.Chest Opener
+2.Upright Row + External Rotation
+3.Toe Touch
+    </string>
+
+    <string name="rest">
+        It is rest that makes you stronger, because it is the rest that allows the muscles that you have broken down to heal and recover.
+        It is the rest that allows you to recover so you can be strong, and thereby handle the increased weight, and increased number of sets and reps needed to gain further.
+    </string>
+
+    <string name="day6">
+        1.Seated Dumbbell Shoulder Press\n
+        2.Seated Barbell Shoulder Press\n
+        3.Dumbbell Lateral Raise\n
+        4.Face Pull\n
+        5.Wide-Grip Smith-Machine Upright Row\n
+        6.Push Press\n
+        7.Cable Front Raise\n
+        8.One-Arm Cable Lateral Raise\n
+        9.Bent-Over Dumbbell Lateral Raise\n
+        10.Cable Reverse Flye
+    </string>
+
 
     <string name="sugartext">The most important part is to cut back on sugars and starches (carbs).
 When you do that, your hunger levels go down and you end up eating much fewer calories.
