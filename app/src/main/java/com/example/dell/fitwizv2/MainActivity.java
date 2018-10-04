@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     CardView login;
     FirebaseAuth.AuthStateListener mAuthListener;
+    boolean doubleBackToExitPressedOnce = false;
 
 
     @Override
@@ -105,5 +106,28 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+            homeIntent.addCategory(Intent.CATEGORY_HOME);
+            homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(homeIntent);
+            finish();
+        } else {
+
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, "Please click BACK again to Exit", Toast.LENGTH_SHORT).show();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce = false;
+                }
+            }, 2000);
+        }
     }
 }

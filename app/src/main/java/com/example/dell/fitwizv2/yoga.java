@@ -3,9 +3,11 @@ package com.example.dell.fitwizv2;
 import android.content.Intent;
 import android.graphics.YuvImage;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -22,6 +24,8 @@ public class yoga extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     FirebaseAuth mAuth;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,11 @@ public class yoga extends AppCompatActivity {
         dfdImage = findViewById(R.id.dfdImage);
         llImage = findViewById(R.id.llImage);
         triangleImage = findViewById(R.id.tringleImage);
+
+        actionBarDrawerToggle=new ActionBarDrawerToggle(yoga.this,drawerLayout,R.string.drawer_open,R.string.drawer_close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Picasso.with(getApplicationContext()).load("https://satiyoga.eu/images/suryanamaskar.png").into(snImage);
         Picasso.with(getApplicationContext()).load("https://cdn2.stylecraze.com/wp-content/uploads/2013/08/Utkatasana-1.jpg").into(utImage);
@@ -106,11 +115,21 @@ public class yoga extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
     void goToHome() {
         Intent intent = new Intent(yoga.this, MainActivity.class);
         startActivity(intent);
         finish();
     }
+
+
 
 }
 

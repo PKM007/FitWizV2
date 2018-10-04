@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">FitWiz</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
     <string name="squat">Most people skip squats because they’re hard. They use excuses like “Squats are bad for the knees”. But, put bluntly, if you’re not Squatting every week, using free weights, and breaking parallel on every rep, your training program is ineffective.</string>
     <string name="crunch">As a core-training exercise, crunches help improve your balance by strengthening your abdominal muscles. Strong core muscles improve your posture, which helps you function efficiently in everyday life and in sporting events. A healthy posture also helps prevent lower back pain and muscle injury.</string>
     <string name="pushup">Traditional pushups are beneficial for building upper body strength. They work the triceps, pectoral muscles, and shoulders. When done with proper form, they can also strengthen the lower back and core by engaging (pulling in) the abdominal muscles. Pushups are a fast and effective exercise for building strength. They can be done from virtually anywhere and don’t require any equipment.</string>

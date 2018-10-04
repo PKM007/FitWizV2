@@ -2,9 +2,11 @@ package com.example.dell.fitwizv2;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -23,6 +25,8 @@ public class selectActitvity extends AppCompatActivity {
     Button fitness,yoga,bulk,health;
     FirebaseAuth mAuth;
     ImageView fitnessImage,yogaImage,bulkImage,healthImage;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,11 @@ public class selectActitvity extends AppCompatActivity {
         yogaImage=findViewById(R.id.yogaImage);
         bulkImage=findViewById(R.id.bulkImage);
         healthImage=findViewById(R.id.healthImage);
+
+        actionBarDrawerToggle=new ActionBarDrawerToggle(selectActitvity.this,drawerLayout,R.string.drawer_open,R.string.drawer_close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Picasso.with(getApplicationContext()).load("http://english.samajalive.in/wp-content/uploads/2018/09/onlyfitness_cardio_1706x1280Px43-1024x768.jpg").into(fitnessImage);
         Picasso.with(getApplicationContext()).load("http://www.ogdoo.gr/media/k2/items/cache/1df09860aadc37ce4bd867cf5891b898_XL.jpg").into(yogaImage);
@@ -153,9 +162,20 @@ public class selectActitvity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     void goToHome() {
         Intent intent = new Intent(selectActitvity.this, MainActivity.class);
         startActivity(intent);
         finish();
     }
+
+
 }

@@ -2,9 +2,11 @@ package com.example.dell.fitwizv2;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -16,6 +18,7 @@ public class bulk extends AppCompatActivity {
     DrawerLayout drawerLayout;
     FirebaseAuth mAuth;
     NavigationView navigationView;
+    ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,12 @@ public class bulk extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.my_drawer_signed);
         navigationView = findViewById(R.id.nav_view);
+
+        actionBarDrawerToggle=new ActionBarDrawerToggle(bulk.this,drawerLayout,R.string.drawer_open,R.string.drawer_close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()
 
         {
@@ -87,9 +96,18 @@ public class bulk extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    
     void goToHome() {
         Intent intent = new Intent(bulk.this, MainActivity.class);
         startActivity(intent);
         finish();
     }
+
 }

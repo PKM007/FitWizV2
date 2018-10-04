@@ -2,9 +2,11 @@ package com.example.dell.fitwizv2;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -22,6 +24,7 @@ public class fitness extends AppCompatActivity {
     DrawerLayout drawerLayout;
     FirebaseAuth mAuth;
     NavigationView navigationView;
+    ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,11 @@ public class fitness extends AppCompatActivity {
         glutebridgeImage=findViewById(R.id.glutebridgeImage);
         lungesImage=findViewById(R.id.lungesImage);
         plankImage=findViewById(R.id.plankImage);
+
+        actionBarDrawerToggle=new ActionBarDrawerToggle(fitness.this,drawerLayout,R.string.drawer_open,R.string.drawer_close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Picasso.with(getApplicationContext()).load("https://bodyformfitness.com/wp-content/uploads/2016/02/squatting-exercises.jpg").into(squadImage);
         Picasso.with(getApplicationContext()).load("http://www.themusclesecrets.com/images/abdominal-crunches-end.png").into(crunchImage);
@@ -107,9 +115,19 @@ public class fitness extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     void goToHome() {
         Intent intent = new Intent(fitness.this, MainActivity.class);
         startActivity(intent);
         finish();
     }
+
+
 }
