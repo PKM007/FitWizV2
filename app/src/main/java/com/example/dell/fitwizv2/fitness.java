@@ -73,6 +73,7 @@ public class fitness extends AppCompatActivity {
                     case R.id.signout:
                         mAuth.signOut();
                         goToHome();
+                        break;
 
                     case R.id.share:
                         Intent myIntent=new Intent(Intent.ACTION_SEND);

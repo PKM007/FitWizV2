@@ -135,6 +135,7 @@ public class UserDisplayActivity extends AppCompatActivity {
                     case R.id.signout:
                         mAuth.signOut();
                         goToHome();
+                        break;
 
 
                     case R.id.share:
