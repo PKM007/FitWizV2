@@ -1,57 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#374258"
-    tools:context=".SignupActivity">
+android:id="@+id/my_drawer"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/gradient3"
+tools:context=".SignupActivity">
 
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="Enter Email" />
+<ImageView
+    android:id="@+id/imageView2"
+    android:layout_width="250dp"
+    android:layout_height="145dp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="32dp"
+    app:srcCompat="@drawable/logo5" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/email"
-        android:ems="10"
-        android:hint="Enter Password"
-        android:inputType="textPassword" />
+<EditText
+    android:id="@+id/email"
+    android:layout_width="200dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="230dp"
+    android:background="#11000000"
+    android:drawableLeft="@drawable/ic_action_user"
+    android:ems="10"
+    android:hint="Enter Yor Email"
+    android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/retyped_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/password"
-        android:ems="10"
-        android:hint="Confirm Password"
-        android:inputType="textPassword" />
+<EditText
+    android:id="@+id/password"
+    android:layout_width="200dp"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="270dp"
+    android:background="#11000000"
+    android:drawableLeft="@drawable/ic_action_password"
+    android:ems="10"
+    android:hint="Enter Password"
+    android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/retyped_password"
-        android:layout_marginTop="50dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/colorPrimary"
-        android:text="Signup" />
+<EditText
+    android:id="@+id/retyped_password"
+    android:layout_width="200dp"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="185dp"
+    android:background="#11000000"
+    android:drawableLeft="@drawable/ic_action_password"
+    android:ems="10"
+    android:hint="Confirm Password"
+    android:inputType="textPassword" />
 
+<android.support.v7.widget.CardView
+    android:layout_width="300dp"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="105dp"
+    android:id="@+id/submit"
+    app:cardBackgroundColor="@color/colorAccent"
+    app:cardCornerRadius="25dp"
+
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Register"
+            android:textColor="#fff"
+            android:textSize="24sp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
 </RelativeLayout>
