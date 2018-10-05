@@ -26,7 +26,8 @@
         <activity android:name=".yoga" />
         <activity android:name=".bulk" />
         <activity android:name=".health" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".about_us"></activity>
     </application>
 
 </manifest>
