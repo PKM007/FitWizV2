@@ -1,5 +1,6 @@
 package com.example.dell.fitwizv2;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
@@ -7,12 +8,14 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,6 +29,7 @@ public class selectActitvity extends AppCompatActivity {
     FirebaseAuth mAuth;
     ImageView fitnessImage,yogaImage,bulkImage,healthImage;
     ActionBarDrawerToggle actionBarDrawerToggle;
+    private TextView alertTextView;
 
 
     @Override
@@ -43,6 +47,7 @@ public class selectActitvity extends AppCompatActivity {
         yogaImage=findViewById(R.id.yogaImage);
         bulkImage=findViewById(R.id.bulkImage);
         healthImage=findViewById(R.id.healthImage);
+        alertTextView = (TextView) findViewById(R.id.AlertTextView);
 
         actionBarDrawerToggle=new ActionBarDrawerToggle(selectActitvity.this,drawerLayout,R.string.drawer_open,R.string.drawer_close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -153,6 +158,22 @@ public class selectActitvity extends AppCompatActivity {
                         intent6.putExtra(Intent.EXTRA_TEXT,"");
                         intent6.setType("message/rfc822");
                         startActivity(Intent.createChooser(intent6,"Send Email"));
+                        break;
+
+                    case R.id.aboutus:
+                        AlertDialog.Builder builder = new AlertDialog.Builder(selectActitvity.this);
+
+                        builder.setCancelable(true);
+                        builder.setTitle("About Us");
+                        builder.setMessage("We are a group that is trying to make people life easier and healthier. Thankyou!!");
+
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                alertTextView.setVisibility(View.VISIBLE);
+                            }
+                        });
+                        builder.show();
                         break;
 
 
